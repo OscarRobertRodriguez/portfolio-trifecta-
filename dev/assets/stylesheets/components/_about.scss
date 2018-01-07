@@ -1,0 +1,34 @@
+
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.me-photo {
+  margin-top: 50px;
+  display: block;
+  width: 150px;
+  border-radius: 50%;
+}
+
+
+.about-intro {
+	text-align: justify;
+	padding: 15px;
+	max-width: 500px;
+	font-size: $font-size-large;
+	color: set-text-color(green);
+	line-height: 1.4rem;
+	margin-bottom: 6em;
+}
+
+
+
+.about-intro__name {
+	color: red;
+	font-size: $font-size-largest;
+	text-transform: capitalize;
+}

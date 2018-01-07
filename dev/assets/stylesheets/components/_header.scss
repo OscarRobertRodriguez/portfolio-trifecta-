@@ -1,0 +1,15 @@
+
+.header-section  {
+	height: 5rem;
+	background: $color-primary;
+	display: flex;
+	align-items: center;
+}
+
+
+.my-name {
+	color: set-text-color($color-primary);
+	text-transform: capitalize;
+	margin-left: 15px;
+	font-size: $font-size-large;
+}

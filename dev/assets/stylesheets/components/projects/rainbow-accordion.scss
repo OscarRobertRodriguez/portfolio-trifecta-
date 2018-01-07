@@ -1,0 +1,247 @@
+
+
+.rainbow-accordion {
+    display:flex;
+    border: 1px solid black;
+    width: 80%;
+    height:auto;
+    border-radius: 10px;
+    max-width: 800px;
+    min-width: 310px;
+    margin: 5px 10px;
+}
+
+.rainbow-accordion ul {
+    padding: 0;
+    margin: 10px auto;
+    width: 99%;
+    list-style:none;
+}
+
+
+.rainbow-accordion label:hover  {
+    color: #fff;
+    background-color:#C1263F;
+    font-weight:600;
+}
+
+.rainbow-accordion__label {
+    margin-top: 2px;
+    border:1px solid black;
+    padding:10px;
+    font-size:20px;
+    color:#641C19;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-family: sans-serif;
+    background-color:#DB5A3F;
+    text-transform:uppercase;
+    transition: background-color .5s ease-out ;
+    display: block;
+    position: relative;
+    cursor:pointer;
+    transition: all 1s ease-in-out;
+}
+
+
+
+.rainbow-accordion .content {
+    overflow:hidden;
+    padding: 0 1em;
+    width:inherit;
+    height: 2px;
+    border: inherit;
+    background-color:#fff;
+    transition: all .5s ease-in-out;
+    border:none;
+    background: #cfd8dc;
+    font-family: sans-serif;
+}
+
+.rainbow-accordion .content h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color:#AB47BC;
+}
+
+.rainbow-accordion .content h4 {
+    font-size:17px;
+}
+
+.rainbow-accordion .content p {
+    color:#303740;
+    margin:2px;
+    font-size:17px;
+}
+
+.rainbow-accordion .content span {
+    text-decoration:line-through;
+}
+
+.rainbow-accordion [type="radio"] {
+    display:none;
+}
+
+.rainbow-accordion [type="radio"]:checked ~ label {
+    color: #fff;
+    background-color:#C1263F;
+    font-weight:600;
+}
+
+.rainbow-accordion [type="radio"]:checked  ~ .content {
+    height: 200px;
+    border: 1px solid black;
+    border-top: none;
+}
+
+/* media */
+
+
+
+
+
+
+
+ .rainbow-accordion label {
+        margin-top: 2px;
+        border:1px solid black;
+        padding:10px;
+        font-size:20px;
+        color:#641C19;
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-family: sans-serif;
+        background-color:lightblue;
+        text-transform:uppercase;
+        transition: background-color .5s ease-out ;
+        display: block;
+        position: relative;
+        cursor:pointer;
+    }
+
+ .accordion-rainbow   [type="radio"]:checked ~ label {
+        color: #fff;
+        background-color:darkblue;
+        font-weight:600;
+    }
+
+    .accordion-rainbow label:hover  {
+        color: #fff;
+        background-color:darkblue;
+        font-weight:600;
+    }
+
+
+
+
+
+@media  (min-width:400px)  and (max-width: 460px)  {
+  .rainbow-accordion  label {
+        margin-top: 2px;
+        border:1px solid black;
+        padding:10px;
+        font-size:20px;
+        color:#641C19;
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-family: sans-serif;
+        background-color:lightgreen;
+        text-transform:uppercase;
+        transition: background-color .5s ease-out, font-weight .2s ease ;
+        display: block;
+        position: relative;
+        cursor:pointer;
+    }
+
+  .accordion-rainbow  [type="radio"]:checked ~ label {
+        color: #fff;
+        background-color:darkgreen;
+        font-weight:600;
+    }
+
+    .rainbow-accordion label:hover  {
+        color: #fff;
+        background-color:darkgreen;
+        font-weight:600;
+    }
+  
+}
+
+
+
+@media (min-width:461px) and (max-width: 700px) {
+  .rainbow-accordion label {
+        margin-top: 2px;
+        border:1px solid black;
+        padding:10px;
+        font-size:20px;
+        color:#f9625c;
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-family: sans-serif;
+        background-color:lightblue;
+        text-transform:uppercase;
+        transition: background-color .5s ease-out ;
+        display: block;
+        position: relative;
+        cursor:pointer;
+    }
+  
+ 
+ .rainbow-accordion   [type="radio"]:checked ~ label {
+        color: #fff;
+        background-color:#4fc3f7;
+        font-weight:600;
+    }
+
+    .rainbow-accordion label:hover  {
+        color: #fff;
+        background-color:darkblue;
+        font-weight:600;
+    }
+
+
+}
+
+
+
+@media (min-width:701px) {
+  .rainbow-accordion label {
+        margin-top: 2px;
+        border:1px solid black;
+        padding:10px;
+        font-size:20px;
+        color:#f9625c;
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-family: sans-serif;
+        background-color:purple;
+        text-transform:uppercase;
+        transition: background-color .5s ease-out ;
+        display: block;
+        position: relative;
+        cursor:pointer;
+    }
+  
+ 
+  .rainbow-accordion  [type="radio"]:checked ~ label {
+        color: #fff;
+        background-color:#ab47bc;
+        font-weight:600;
+    }
+
+    .rainbow-accordion label:hover  {
+        color: #fff;
+        background-color:darkblue;
+        font-weight:600;
+    }
+
+
+}
+
+
+
+
+
+
+

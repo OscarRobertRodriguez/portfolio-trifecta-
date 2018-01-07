@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>Document</title>
+	</head>
+	<body >
+		<div class="page-container">
+			<header class='header-section'>
+				<div>
+					<p class="my-name">oscar rodriguez</p>
+				</div>
+				
+			</header>
+			<main class="project-container">
+				<h1 class='project-heading'>Accordion</h1>
+				<p class="project-subtitle">drop-down accordion built with css and html</p>
+				
+				<div class="project-tech__container">
+					<h3>technologies used</h3>
+				<ul class="project-tech">
+					<li>html</li>
+					<li>css</li>
+					<li>javascript</li>
+				</ul>
+			    </div>
+				<div class="rainbow-accordion">
+					<ul>
+						<!-- Item 1 -->
+						<li>
+							<input id="appetizers" type="radio" name="menu"/>
+							<label for="appetizers">appetizers</label>
+							<div class="content">
+								<h3>Check our tasty apps!</h3>
+								<h4>Happy hour menu - half off!!</h4>
+								<p>Chicken Wings(6) - 5.99$</p>
+								<p>Calamari - 7.99$</p>
+								<p>Garlic breaded pickles - 4.59$</p>
+							</div>
+						</li>
+						<!-- Item 2 -->
+						<li>
+							<input id="entrees" type="radio" name="menu"/>
+							<label for="entrees">entrees</label>
+							<div class="content">
+								<h3>Check our tasty apps!</h3>
+								<h4>Happy hour menu - half off!!</h4>
+								<p>Chicken Wings(6) - 5.99$</p>
+								<p>Calamari - 7.99$</p>
+								<p>Garlic breaded pickles - 4.59$</p>
+							</div>
+						</li>
+						<!-- Item 3 -->
+						<li>
+							<input id="desserts" type="radio" name="menu"/>
+							<label for="desserts">desserts</label>
+							<div class="content">
+								<h3>Check our tasty apps!</h3>
+								<h4>Happy hour menu - half off!!</h4>
+								<p>Chicken Wings(6) - 5.99$</p>
+								<p>Calamari - 7.99$</p>
+								<p>Garlic breaded pickles - 4.59$</p>
+							</div>
+						</li>
+						<!-- Placeholder for Item 4 -->
+						<!-- Item 2 -->
+						<li>
+							<input id="soupsAndSalads" type="radio" name="menu"/>
+							<label for="soupsAndSalads">soups and salads</label>
+							<div class="content">
+								<h3>Salad Mania</h3>
+								<h4>Free salad all day</h4>
+								<p>Octopus Salad - <span>10.00$</span> free</p>
+								<p>Pasta Salad - <span>4.59$</span> free</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<article class="project-article">
+					<section class="project-section">
+						<h3>How it works</h3>
+						<p>Building an accordion with CSS was a little bit strange to me at first. Using label and radio buttons felt odd since there
+						was no form tag in the code.</p>
+						<p>Either way it works and is a neat trick so let's dive in and see what's going on under the hood.</p>
+						
+						<pre>
+						<code class="language-html">
+							
+							
+					     &lt;div class=&quot;rainbow-accordion&quot;&gt;
+							&lt;ul&gt;
+								&lt;!-- Item 1 --&gt;
+								&lt;li&gt;
+								    &lt;!-- use radio button and label for our css magic  ----&gt; 
+									&lt;input id=&quot;appetizers&quot; type=&quot;radio&quot; name=&quot;menu&quot;/&gt;
+									&lt;label for=&quot;appetizers&quot;&gt;appetizers&lt;/label&gt;
+									&lt;div class=&quot;content&quot;&gt;
+										&lt;h3&gt;Check our tasty apps!&lt;/h3&gt;
+										&lt;h4&gt;Happy hour menu - half off!!&lt;/h4&gt;
+										&lt;p&gt;Chicken Wings(6) - 5.99$&lt;/p&gt;
+										&lt;p&gt;Calamari - 7.99$&lt;/p&gt;
+										&lt;p&gt;Garlic breaded pickles - 4.59$&lt;/p&gt;
+									&lt;/div&gt;
+								&lt;/li&gt;
+								&lt;!-- Item 2 --&gt; 
+								&lt;!-- list repeats with other list items ----&gt;
+
+						</code>
+						</pre>
+								<p>Nothing too fancy going on in the html. A list is used because just make more semantic sense for the code. Flexbox was used on the `rainbow-accordion` to make our whole list responsive.</p>
+
+								<p>We set the <span class="token property">content</span> class is given a 2px height so that it does not expand accordion. Then I set an <span class="token property">overflow:hidden</span> so that the content does not spill out of the content div. This sets the inactive state of each content divs. </p>
+							<pre>
+								<code class='language-css'>
+									.rainbow-accordion .content {
+									    overflow:hidden;
+									    padding: 0 1em;
+									    width:inherit;
+									    height: 2px;
+									    border: inherit;
+									    background-color:#fff;
+									    transition: all .5s ease-in-out;
+									    border:none;
+									    background: #cfd8dc;
+									    font-family: sans-serif;
+									}
+								</code>
+							</pre>
+
+
+							<p>Now we style the label and that will act as our state handler. Every time another label is clicked it will check the radio button associated with it and uncheck the other label. Since we don't need to see the radio button I set it to display none.</p>
+
+							<pre>
+								<code class="language-css">
+									.rainbow-accordion__label {
+									margin-top: 2px;
+									border:1px solid black;
+									padding:10px;
+									font-size:20px;
+									color:#641C19;
+									letter-spacing: 1px;
+									font-weight: 500;
+									font-family: sans-serif;
+									background-color:#DB5A3F;
+									text-transform:uppercase;
+									transition: background-color .5s ease-out ;
+									display: block; // this allows the label to fill in the li tag
+									position: relative;
+									cursor:pointer;
+									transition: all 1s ease-in-out;
+								}
+								// hides radio buttons
+								.rainbow-accordion [type="radio"] {
+									display: none;
+								}
+								</code>
+							</pre>
+
+                            <p>Now this is the cool part on how we can leverage css to do something you might think would require JavaScript. Now I love JavaScript
+                            and for more complex components or a bigger site there is nothing better to use but in this case CSS works. </p>
+
+                            <p>I use the</p>
+
+					</section>
+					<section class="project-section">
+						<h3>Problems</h3>
+					</section>
+				</article>
+			</main>
+			<footer>
+				&copy; oscar rodriguez - ${new Date().getFullYear()}
+			</footer>
+		</div>
+	</body>
+</html>
