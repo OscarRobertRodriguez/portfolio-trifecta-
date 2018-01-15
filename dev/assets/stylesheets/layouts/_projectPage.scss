@@ -14,6 +14,7 @@
 .project-heading {
    font-size: 3rem;
    margin-bottom: 0;
+   text-align: center;
 }
 
 .project-subtitle {
@@ -42,6 +43,7 @@
 .project-tech {
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 .project-tech > li {
   display: inline-block;
@@ -81,6 +83,7 @@
 
 .project-section {
 	text-align: center;
+	
 }
 
 
@@ -95,3 +98,26 @@
 .project-section h3 {
   font-size: 2.3rem;
 }
+
+
+
+
+/// project Calculator Section 
+
+
+figure {
+	margin: 1em auto;
+}
+
+.project-calculator_mock-img {
+	width: 90%;
+	margin: 0;
+}
+
+
+@media (min-width: 600px) {
+	.project-calculator_mock-img {
+		width: 50%;
+	}
+}
+

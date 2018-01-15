@@ -18,7 +18,8 @@ const config = {
 // this is where webpack will look in the index.js
  entry: {
    main:   DEV + '/index.js',
-   project: DEV + '/projectPage.js'
+   project: DEV + '/assets/js/projects-js/projectPage.js',
+   projectCalc: DEV + '/assets/js/projects-js/project-calc/project-calculator.js',
  },
  
  // the dist folder will created with a bundle.js file
@@ -92,8 +93,13 @@ const config = {
  	}),
    new HTMLWebpackPlugin({  // Also generate a test.html
       filename: 'project-accordion.html',
-      template: DEV + '/project-accordion.html',
+      template: DEV + '/assets/pages/project-accordion.html',
       chunks: ['project']
+    }),
+   new HTMLWebpackPlugin({  // Also generate a test.html
+      filename: 'project-calculator.html',
+      template: DEV + '/assets/pages/project-calculator.html',
+      chunks: ['project', 'projectCalc']
     }),
    new CleanWebpackPlugin(['dist']) 
  ],

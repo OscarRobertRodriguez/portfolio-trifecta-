@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>Document</title>
+	</head>
+	<body >
+		<div class="page-container">
+			<header class='header-section'>
+				<div>
+					<p class="my-name">oscar rodriguez</p>
+				</div>
+				
+			</header>
+			<main class="project-container">
+				<h1 class='project-heading'>Android Calculator</h1>
+				<p class="project-subtitle">calculator made to look like an android phone</p>
+				
+				<div class="project-tech__container">
+					<h3>technologies used</h3>
+					<ul class="project-tech">
+						<li>html</li>
+						<li>css</li>
+						<li>javascript</li>
+						<li>webpack</li>
+					</ul>
+				</div>
+				<section class="phone">
+					<div class="phone_frame">
+						<div class="phone__camera-lens"></div>
+						<div class="phone__power-btn"></div>
+						<div class="phone__volume-btn"></div>
+						<div class="phone__speaker-top"></div>
+						<div class="phone__speaker-bottom"></div>
+						<div class="calculator_container">
+							<div class="screen">
+								<input class="screen_input" disabled='disabled'>
+								<input class="screen_result" disabled="disabled">
+							</div>
+							
+							<div class="buttons_container">
+								<div class="buttons_left-side">
+									<div>
+										<button class="btn btn-dark" value = '7'>7</button>
+										<button class="btn btn-dark" value = '8'>8</button>
+										<button class="btn btn-dark" value = '9'>9</button>
+									</div>
+									<div>
+										<button class="btn btn-dark" value = '4'>4</button>
+										<button class="btn btn-dark" value = '5'>5</button>
+										<button class="btn btn-dark" value = '6'>6</button>
+									</div>
+									<div>
+										<button class="btn btn-dark" value = '1'>1</button>
+										<button class="btn btn-dark" value = '2'>2</button>
+										<button class="btn btn-dark" value = '3'>3</button>
+									</div>
+									<div>
+										<button class="btn btn-dark" value = '.'>.</button>
+										<button class="btn btn-dark" value = '0'>0</button>
+										<button class="btn btn-dark" value = '='>&#61;</button>
+									</div>
+								</div>
+								<div class="buttons_right-side">
+									<button class="btn btn-light" id='delBtn' value = 'DEL'>DEL</button>
+									<button class="btn btn-light" value = '÷'>&#xf7;</button>
+									<button class="btn btn-light" value = '×'>&#xd7;</button>
+									<button class="btn btn-light" value = '−'>&minus;</button>
+									<button class="btn btn-light" value = '+'>&#43;</button>
+								</div>
+								<article class="history_slide" id="history">
+									<div class='arrow-left'></div>
+									<div class="history_list">
+										<h3 class='history-title'>Notes</h3>
+										<p>holding and releasing the delete btn will clear the screen</p>
+										<h3 class='history-title'>Future Features</h3>
+										<p>history screen to show last 10 results</p>
+										<p>more complex math support scientific</p>
+										<h3 class='history-title'>Author</h3>
+										<p>Oscar Rodriguez</p>
+									</div>
+									
+								</article>
+							</div>
+							
+						</div>
+					</div>
+				</section>
+				
+				<article class="project-article">
+					<section class="project-section">
+						<h3>How it works</h3>
+						<p>I thought building a calculator was simple at first, put a function here and there but when I got to the small details well it got tricky quick. I managed to pull it off though with grit, perserverance and donuts(donuts are for me).Although it's without it's faults.</p>
+
+						<p>Before I completed this calculator I had built one that just wasn't up to my standards. I mean it didn't even work.</p>
+
+							<figure>
+								<img class="project-calculator_mock-img" alt=''>
+								<figcaption>when your calculator is starving, you got problems.</figcaption>
+							</figure>
+						<p>So I scraped that one and built this android calculator. I started thinking more about functions in terms of combining them to get a final value. This helped me a lot.</p>
+
+						
+						
+					</section>
+				</article>
+			</main>
+			<footer>
+				&copy; oscar rodriguez - ${new Date().getFullYear()}
+			</footer>
+		</div>
+	</body>
+</html>
